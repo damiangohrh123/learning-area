@@ -25,10 +25,31 @@
   
   <script>
     let response;
-    let score = 75;
-    let machineActive = false;
+    let score = 25;
+    let machineActive = true;
   
     // Add your code here
+    if (machineActive === true) {
+      if (score < 0 || score > 100) {
+        response = 'This is not possible, an error has occured.'
+      }
+      else if (score >= 20 && score <=39) {
+        response = 'You know some things, but it\'s a pretty bad score. Needs improvement.'
+      }
+      else if (score >= 40 && score <=69) {
+        response = 'You did a passable job, not bad!'
+      }
+      else if (score >= 70 && score <= 89) {
+        response = 'That\s a great score, you really know your stuff.'
+      }
+      else if (score >= 90 && score <= 100) {
+        response = 'What an amazing score! Did you cheat? Are you for real?'
+      }
+    }
+    else {
+      response = 'The Machine is not on...'
+      alert(response);
+    }
 
     // Don't edit the code below here!
 
